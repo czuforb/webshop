@@ -1,21 +1,30 @@
 import React from "react"
-import { Link } from "gatsby"
-
+// Layout
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+//Sections
+import Hero from "../components/sections/hero"
+import Feature from "../components/sections/feature"
+import ProductCard from "../components/elements/productCard"
+import Grid from "../components/elements/grid"
+import SectionTitle from "../components/elements/sectionTitle"
+const array = [1, 2, 3, 4, 5, 6, 7, 8]
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const index = () => {
+  return (
+    <Layout>
+      <Hero />
+      <SectionTitle
+        title="Csomagajánlataink"
+        text="Bence bence bence bence! "
+      />
+      <Grid>
+        {array.map(item => {
+          return <ProductCard />
+        })}
+      </Grid>
+      <Feature />
+    </Layout>
+  )
+}
 
-export default IndexPage
+export default index
