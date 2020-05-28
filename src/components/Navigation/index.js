@@ -1,5 +1,5 @@
 import React from "react"
-import Button from "../components/elements/button"
+import Button from "../Buttons/Button"
 const navigation = () => {
   return (
     <div className="w-full border-b border-gray-300">

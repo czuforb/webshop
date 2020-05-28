@@ -1,30 +1,30 @@
 import React from "react"
 // Layout
-import Layout from "../components/layout"
+import Layout from "../components/Layout/"
 //Sections
-import Hero from "../components/sections/hero"
-import Feature from "../components/sections/feature"
-import ProductCard from "../components/elements/productCard"
-import Grid from "../components/elements/grid"
-import SectionTitle from "../components/elements/sectionTitle"
-const array = [1, 2, 3, 4, 5, 6, 7, 8]
+import { graphql } from "gatsby"
 
-const index = () => {
+const index = ({ data }) => {
+  console.log(data)
   return (
     <Layout>
-      <Hero />
-      <SectionTitle
-        title="Csomagajánlataink"
-        text="Bence bence bence bence! "
-      />
-      <Grid>
-        {array.map(item => {
-          return <ProductCard />
-        })}
-      </Grid>
-      <Feature />
+      <pre>{JSON.stringify(data, null, 2)}</pre>
     </Layout>
   )
 }
 
 export default index
+
+export const query = graphql`
+  query MyQuery {
+    wpcontent {
+      posts {
+        nodes {
+          bor {
+            name
+          }
+        }
+      }
+    }
+  }
+`

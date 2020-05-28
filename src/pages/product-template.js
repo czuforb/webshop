@@ -1,10 +1,9 @@
 import React from "react"
 // Layout
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 //Sections
 //Components
-import Button from "../components/elements/button"
-import Related from "../components/sections/related"
+
 const index = () => {
   return (
     <Layout>

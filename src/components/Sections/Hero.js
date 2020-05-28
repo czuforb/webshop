@@ -1,6 +1,6 @@
 import React from "react"
 //Components
-import Button from "../elements/button"
+import Button from "../Elements/button"
 const hero = props => {
   return (
     <section className="w-full h-screen ">

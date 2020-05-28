@@ -1,6 +1,6 @@
 import React from "react"
 
-const grid = ({ children }) => {
+const Grid = ({ children }) => {
   return (
     <section className="w-full py-8">
       <div className="container mx-auto grid grid-cols-4 gap-12">
@@ -10,4 +10,4 @@ const grid = ({ children }) => {
   )
 }
 
-export default grid
+export default Grid
