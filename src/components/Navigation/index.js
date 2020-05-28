@@ -1,9 +1,9 @@
 import React from "react"
-import Button from "../Buttons/Button"
+
 const navigation = () => {
   return (
     <div className="w-full border-b border-gray-300">
-      <nav className="container mx-auto flex items-center justify-center py-2">
+      <nav className="container flex items-center justify-center py-2 mx-auto">
         <div className="mr-auto">
           <ul className="flex justify-between">
             <li>Menu</li>

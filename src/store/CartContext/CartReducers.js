@@ -4,19 +4,19 @@ const CartReducer = (state, action) => {
   switch (action.type) {
     case "ADD":
       const existingProduct = state.cart.find(
-        item => item.id === action.playload.product.id
+        item => item.id === action.product.id
       )
       if (existingProduct) {
         return {
           cart: state.cart.map(element =>
-            element.id === action.playload.product.id
+            element.id === action.product.id
               ? { ...element, quantity: element.quantity + 1 }
               : element
           ),
         }
       } else {
         return {
-          cart: [...state.cart, { ...action.playload.product, quantity: 1 }],
+          cart: [...state.cart, { ...action.product, quantity: 1 }],
         }
       }
     case "INCREASE":

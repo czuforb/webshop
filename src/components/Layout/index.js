@@ -4,7 +4,7 @@ import React from "react"
 import Header from "./Header"
 import Footer from "./Footer"
 //Context
-import CartContext from "../../store/CartContext/CartContext"
+import CartContext from "../../store/CartContext"
 const Layout = ({ children }) => {
   return (
     <>

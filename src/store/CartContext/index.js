@@ -7,13 +7,17 @@ export const CartContext = React.createContext(null)
 
 export default ({ children }) => {
   // Cart items from local storage TODO: make the localstorage property name dynamic from the sitename
-  const [cart, setCart] = useLocalStorage("winery-cart", { cart: [] })
+  const [cart, setCart] = useLocalStorage("new-webshop", { cart: [] })
 
   const [state, dispatch] = useReducer(CartReducer, cart)
 
   useEffect(() => {
     setCart(state)
-  }, [state, cart])
+  }, [state, cart, setCart])
+
+  const handleAddCart = action => {
+    dispatch(action)
+  }
 
   const store = {
     cart: state.cart,
