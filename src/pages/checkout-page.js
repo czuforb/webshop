@@ -1,9 +1,7 @@
 import React from "react"
-// Layout
-import Layout from "../components/Layout"
-//Sections
-//Components
 
+import Layout from "../components/Layout"
+import CartListing from "../components/Cart/CartListing"
 const index = () => {
   return (
     <Layout>
@@ -24,87 +22,7 @@ const index = () => {
                     <h2>Price</h2>
                   </div>
                 </li>
-                <li className="grid grid-cols-12 col-span-12 px-4 py-2">
-                  <div className="col-span-2">
-                    <div className="w-24 h-24 p-4 bg-gray-300"></div>
-                  </div>
-                  <div className="flex flex-col justify-around col-span-4 px-2">
-                    <h2>Item name</h2>
-                    <h3>Subtitle</h3>
-                  </div>
-                  <div className="flex items-center col-span-3">
-                    <div className="flex overflow-hidden bg-gray-300">
-                      <button className="p-4 font-extrabold bg-gray-400">
-                        -
-                      </button>
-                      <p className="px-4 my-auto font-extrabold tracking-widest">
-                        123
-                      </p>
-                      <button className="p-4 font-extrabold bg-gray-400">
-                        +
-                      </button>
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-around col-span-2 px-2">
-                    <p>
-                      12000 <span>Ft</span>
-                    </p>
-                  </div>
-                </li>
-                <li className="grid grid-cols-12 col-span-12 px-4 py-2">
-                  <div className="col-span-2">
-                    <div className="w-24 h-24 p-4 bg-gray-300"></div>
-                  </div>
-                  <div className="flex flex-col justify-around col-span-4 px-2">
-                    <h2>Item name</h2>
-                    <h3>Subtitle</h3>
-                  </div>
-                  <div className="flex items-center col-span-3">
-                    <div className="flex overflow-hidden bg-gray-300">
-                      <button className="p-4 font-extrabold bg-gray-400">
-                        -
-                      </button>
-                      <p className="px-4 my-auto font-extrabold tracking-widest">
-                        123
-                      </p>
-                      <button className="p-4 font-extrabold bg-gray-400">
-                        +
-                      </button>
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-around col-span-2 px-2">
-                    <p>
-                      12000 <span>Ft</span>
-                    </p>
-                  </div>
-                </li>
-                <li className="grid grid-cols-12 col-span-12 px-4 py-2">
-                  <div className="col-span-2">
-                    <div className="w-24 h-24 p-4 bg-gray-300"></div>
-                  </div>
-                  <div className="flex flex-col justify-around col-span-4 px-2">
-                    <h2>Item name</h2>
-                    <h3>Subtitle</h3>
-                  </div>
-                  <div className="flex items-center col-span-3">
-                    <div className="flex overflow-hidden bg-gray-300">
-                      <button className="p-4 font-extrabold bg-gray-400">
-                        -
-                      </button>
-                      <p className="px-4 my-auto font-extrabold tracking-widest">
-                        123
-                      </p>
-                      <button className="p-4 font-extrabold bg-gray-400">
-                        +
-                      </button>
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-around col-span-2 px-2">
-                    <p>
-                      12000 <span>Ft</span>
-                    </p>
-                  </div>
-                </li>
+                <CartListing />
               </ul>
               <div className="grid grid-cols-12 col-span-12 px-4">
                 <div className="flex justify-around w-full col-span-4 col-start-9 mt-4 mb-2 border-b ">

@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/Layout/"
 //Sections
 import Grid from "../components/Elements/Grid"
-import ProductCard from "../components/ProductCard"
+import ProductCard from "../components/ProductCard/"
 import { graphql } from "gatsby"
 import Test from "../components/Test"
 const index = ({ data }) => {
@@ -11,7 +11,14 @@ const index = ({ data }) => {
     <Layout>
       <Grid>
         {data.wpcontent.posts.nodes.map(item => {
-          return <ProductCard data={item.bor} id={item.id} key={item.id} />
+          return (
+            <ProductCard
+              data={item.bor}
+              id={item.id}
+              key={item.id}
+              slug={item.slug}
+            />
+          )
         })}
       </Grid>
       <Test />
@@ -27,20 +34,13 @@ export const query = graphql`
       posts {
         nodes {
           bor {
-            alcohol
-            description
-            fieldGroupName
-            grape
-            harvest
             image
             name
             price
-            size
             type
-            year
-            vineyard
           }
           id
+          slug
         }
       }
     }

@@ -1,6 +1,8 @@
 import React from "react"
+import CartIndicator from "./CartIndicator"
+import { Link } from "gatsby"
 
-const navigation = () => {
+const Navigation = () => {
   return (
     <div className="w-full border-b border-gray-300">
       <nav className="container flex items-center justify-center py-2 mx-auto">
@@ -11,13 +13,15 @@ const navigation = () => {
             <li>Menu</li>
           </ul>
         </div>
-        <h1 className="text-xl font-extrabold">Logo</h1>
+        <Link to="/">
+          <h1 className="text-xl font-extrabold">Logo</h1>
+        </Link>
         <div className="ml-auto">
-          <button className="px-4 py-2 bg-gray-300">CTA</button>
+          <CartIndicator />
         </div>
       </nav>
     </div>
   )
 }
 
-export default navigation
+export default Navigation
